@@ -9,7 +9,7 @@ exports.verifyToken = async (req, res, next) => {
     }
 
     if(!token) {
-        res.status(404).json({message : "No token, Authorization denied."})
+        return res.status(404).json({message : "No token, Authorization denied."})
     }
 
     try {
